@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HairGoalz - Shop</title>
+  <link rel="stylesheet" href="shop.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">HairGoalz</h1>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="cart_page.html" class="nav-link">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Shop Title -->
+  <section class="shop-header">
+    <h2 class="shop-title">Shop All Wigs</h2>
+    <p class="shop-subtitle">Browse our full collection of high-quality wigs</p>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="product-gallery">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="wig1.png" alt="Sleek Wig" class="product-image">
+        <h3 class="product-name">Sleek</h3>
+        <p class="product-price">£49.99</p>
+        <button class="add-to-cart"
+        data-name="Sleek Wig"
+        data-price="49.99"
+        data-image="wig1.png"
+        >Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="wig2.png" alt="Outre Wig" class="product-image">
+        <h3 class="product-name">Outre</h3>
+        <p class="product-price">£54.99</p>
+        <button class="add-to-cart"
+        data-name="Outre Wig"
+        data-price="54.99"
+        data-image="wig2.png"
+        >Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="wig3.png" alt="Outre Wig 2" class="product-image">
+        <h3 class="product-name">Outre Vol. 2</h3>
+        <p class="product-price">£58.99</p>
+        <button class="add-to-cart"
+        data-name="Outre Vol. 2"
+        data-price="58.99"
+        data-image="wig3.png"
+        >Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="wig4.png" alt="Zury Hollywood Wig" class="product-image">
+        <h3 class="product-name">Zury Hollywood</h3>
+        <p class="product-price">£62.99</p>
+        <button class="add-to-cart"
+        data-name="Zury Hollywood"
+        data-image="wig4.png"
+        data-price="62.99"
+        >Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">© 2025 HairGoalz. All rights reserved.</p>
+  </footer>
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - HairGoalz</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body style="display:none;">
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">HairGoalz</h1>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop_page.html" class="nav-link">Shop</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="cart_page.html" class="nav-link">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Checkout Form -->
+  <main class="checkout-container">
+    <h2 class="checkout-title">Secure Checkout</h2>
+    <form id="checkout-form" class="checkout-form">
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Email Address</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+      <label>Delivery Address</label>
+      <textarea rows="4" required></textarea>
+
+      <button type="submit" class="checkout-btn">Place Order</button>
+    </form>
+
+    <p id="success-msg" class="success-msg" style="display:none;">🎉 Order placed! We’ll be in touch soon.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">© 2025 HairGoalz. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('checkout-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('hairgoalz_cart');
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    });
+  </script>
+
+<script>
+  // Check if cart is empty on load
+  const cart = JSON.parse(localStorage.getItem("hairgoalz_cart")) || [];
+
+  if (cart.length === 0) {
+    // Redirect if empty
+    alert("Your cart is empty. Please add items before checking out.");
+    window.location.href = "shop_page.html";
+  } else {
+    // Show the page if cart has items
+    document.body.style.display = "block";
+  }
+</script>
+</body>
+</html>
